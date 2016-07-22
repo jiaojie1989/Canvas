@@ -23,7 +23,10 @@
 
                         @include('shared.success')
 
-                        <h2>Create a New Post</h2>
+                        <h2>Create a New Post
+                            <br>
+                            <small>Set a page image to feature at the top of your blog post by specifying the image path relative to the uploads directory.</small>
+                        </h2>
                     </div>
                     <div class="card-body card-padding">
                         <form class="keyboard-save" role="form" method="POST" id="postCreate" action="{{ route('admin.post.store') }}">
