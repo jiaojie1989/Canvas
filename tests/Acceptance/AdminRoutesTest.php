@@ -56,7 +56,6 @@ class AdminRoutesTest extends TestCase
      */
     public function testUploadsPageResponseCode()
     {
-
         $response = $this->actingAs($this->user)->call('GET', '/admin/upload');
         $this->assertEquals(200, $response->status());
     }

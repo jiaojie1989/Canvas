@@ -19,13 +19,12 @@ class AuthenticationTest extends TestCase
 
     /**
      * Create the user model test subject.
-     * 
+     *
      * @before
      * @return void
      */
     public function createUser()
     {
-
         $this->user = factory(App\Models\User::class)->create();
 
     }
@@ -37,7 +36,6 @@ class AuthenticationTest extends TestCase
      */
     public function testApplicationLogin()
     {
-
         $this->visit('/auth/login')
              ->type($this->user->email, 'email')
              ->type('password', 'password')
@@ -53,7 +51,6 @@ class AuthenticationTest extends TestCase
      */
     public function testApplicationLogout()
     {
-
         $this->actingAs($this->user)
              ->visit('/admin/post')
              ->click('logout')
