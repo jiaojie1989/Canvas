@@ -1,24 +1,21 @@
 <style type="text/css">
-    button.show-password{
-        background-color: #2196f3;
-        border: 1px solid #128ef1;
-        border-radius: 2px;
-        color: #fff;
+    a.show-password{
+        color: #2196f3;
         font-size: 0.9em;
+        margin-top: 10px;
         position: absolute;
         right: 0;
         top: 0;
         transition: all .8s linear;
     }
-    button.show-password:hover{
-        background-color: #128ef1;
+    a.show-password:hover{
         transition: all .8s linear;
     }
 </style>
 
 <script>
         (function(){
-            $('input[name="password"], input[name="new_password"], input[name="new_password_confirmation"]').parent().append('<button type="button" class="show-password"><i class="zmdi zmdi-eye"></i></button>');
+            $('input[name="password"], input[name="new_password"], input[name="new_password_confirmation"]').parent().append('<a href="" class="show-password"><i class="zmdi zmdi-eye"></i></a>');
 
             function toggleIcon (elem) {
                 if ( elem.hasClass ( 'zmdi-eye' ) ) {
@@ -37,7 +34,7 @@
                 var current_icon = $(this).children('i');
                 toggleIcon(current_icon);
                 password_field.attr('type', new_type);
-                e.preventDefault(); 
+                e.preventDefault();
             });
         })();
 </script>
