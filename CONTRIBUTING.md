@@ -18,9 +18,9 @@ Hi! I’m really excited that you are interested in contributing to Canvas. Befo
 
 - Squash the commit if there are too many small ones.
 
-- Make your commit message relevant and useful:
+- Make your commit message relevant and useful, referencing an issue or pull request as often as possible:
     - Bad commit message: `refactor`
-    - Good commit message: `Refactor store method in PostController`
+    - Good commit message: `Refactor store method in PostController #63`
 
 - Follow the [code style](#code-style).
 
