@@ -86,12 +86,14 @@ class UploadController extends Controller
      */
     public function uploadFile(UploadFileRequest $request)
     {
-        $file = $_FILES['file'];
-        $fileName = $request->get('file_name');
-        $fileName = $fileName ?: $file['name'];
-        $path = str_finish($request->get('folder'), '/') . $fileName;
-        $content = File::get($file['tmp_name']);
-        $result = $this->manager->saveFile($path, $content);
+        $file = $request->file('file');
+        $fileName = $request->get('file_name') ?: $file->getClientOriginalName();
+        $fileName = explode('.', $fileName)[0] . '.' . $file->getClientOriginalExtension();
+        
+        $result = $this->manager->saveFile(
+            str_finish($request->get('folder'), '/') . $fileName,
+            File::get($file)
+        );
 
         if ($result === true) {
             Session::set('_new-file', trans('messages.upload_success', ['entity' => 'file']));

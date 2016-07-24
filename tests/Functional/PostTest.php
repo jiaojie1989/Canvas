@@ -57,4 +57,26 @@ class PostTest extends TestCase
         $this->actingAs($this->user)->post('admin/post', ['title' => 'example']);
         $this->assertSessionHasErrors();
     }
+
+    public function testPostsCanBeEdited()
+    {
+        $this->actingAs($this->user)
+            ->visit(route('admin.post.edit', 1))
+            ->type('Foo', 'title')
+            ->press('Save')
+            ->see('Success! Post has been updated')
+            ->see('Foo')
+            ->seeInDatabase('posts', ['title' => 'Foo']);
+    }
+
+    public function testPostsCanBeDeleted()
+    {
+        $this->actingAs($this->user)
+            ->visit(route('admin.post.edit', 1))
+            ->press('Delete')
+            ->dontSee('Success! Post has been deleted.')
+            ->press('Delete Post')
+            ->see('Success! Post has been deleted.')
+            ->dontSeeInDatabase('posts', ['id' => 1]);
+    }
 }

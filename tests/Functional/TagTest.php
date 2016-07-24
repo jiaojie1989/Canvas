@@ -56,4 +56,26 @@ class TagTest extends TestCase
         $this->actingAs($this->user)->post('admin/tag', ['title' => 'example']);
         $this->assertSessionHasErrors();
     }
+
+    public function testTagsCanBeEdited()
+    {
+        $this->actingAs($this->user)
+            ->visit(route('admin.tag.edit', 1))
+            ->type('Foo', 'title')
+            ->press('Save')
+            ->see('Success! Tag has been updated.')
+            ->see('Foo')
+            ->seeInDatabase('tags', ['title' => 'Foo']);
+    }
+
+    public function testTagsCanBeDeleted()
+    {
+        $this->actingAs($this->user)
+            ->visit(route('admin.tag.edit', 1))
+            ->press('Delete')
+            ->dontSee('Success! Tag has been deleted.')
+            ->press('Delete Tag')
+            ->see('Success! Tag has been deleted.')
+            ->dontSeeInDatabase('tags', ['id' => 1]);
+    }
 }
