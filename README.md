@@ -1,4 +1,4 @@
-<p align="center"><a href="http:austintoddj.github.io/Canvas" target="_blank"><img width="200"src="https://raw.githubusercontent.com/austintoddj/Canvas/gh-pages/img/canvas-logo.gif"></a></p>
+<p align="center"><a href="http://canvas.toddaustin.io" target="_blank"><img width="200"src="https://raw.githubusercontent.com/austintoddj/Canvas/gh-pages/img/canvas-logo.gif"></a></p>
 
 <p align="center">
   <a href="https://travis-ci.org/austintoddj/Canvas"><img src="https://travis-ci.org/austintoddj/Canvas.svg?branch=master" alt="Build Status"></a>
