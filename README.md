@@ -19,7 +19,7 @@
 
   <br><br>
 
-  Canvas is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing.
+  [Canvas](http://canvas.toddaustin.io) is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing.
 </p>
 
 # Basic Setup
