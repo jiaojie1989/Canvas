@@ -3,7 +3,7 @@
 <p align="center">
   <a href="https://travis-ci.org/austintoddj/Canvas"><img src="https://travis-ci.org/austintoddj/Canvas.svg?branch=master" alt="Build Status"></a>
   
-  <a href="https://styleci.io/repos/52815899"><img src="https://styleci.io/repos/52815899/shield" alt="StyleCI"></a>
+  <a href="https://styleci.io/repos/52815899"><img src="https://styleci.io/repos/52815899/shield?style=flat" alt="StyleCI"></a>
 
   <a href="https://github.com/austintoddj/Canvas/issues"><img src="https://img.shields.io/github/issues/austintoddj/Canvas.svg" alt="GitHub Issues"></a>
 
