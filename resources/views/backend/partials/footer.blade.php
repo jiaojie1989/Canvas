@@ -6,7 +6,7 @@
         <li><a href="{{url('admin/post')}}">Posts</a></li>
         <li><a href="{{url('admin/tag')}}">Tags</a></li>
         <li><a href="{{url('admin/upload')}}">Uploads</a></li>
-        <li><a href="https://austintoddj.github.io/Canvas">Support</a></li>
+        <li><a href="http://canvas.toddaustin.io">Support</a></li>
         <li><a href="mailto:austin.todd.j@gmail.com">Contact</a></li>
     </ul>
 </footer>
