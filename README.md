@@ -1,19 +1,19 @@
 <p align="center"><a href="http://canvas.toddaustin.io" target="_blank"><img width="200"src="https://raw.githubusercontent.com/austintoddj/Canvas/gh-pages/img/canvas-logo.gif"></a></p>
 
 <p align="center">
-  <a href="https://travis-ci.org/austintoddj/Canvas"><img src="https://travis-ci.org/austintoddj/Canvas.svg?branch=master" alt="Build Status"></a>
+  <a href="https://travis-ci.org/austintoddj/Canvas" target="_blank"><img src="https://travis-ci.org/austintoddj/Canvas.svg?branch=master" alt="Build Status"></a>
   
-  <a href="https://styleci.io/repos/52815899"><img src="https://styleci.io/repos/52815899/shield?style=flat" alt="StyleCI"></a>
+  <a href="https://styleci.io/repos/52815899" target="_blank"><img src="https://styleci.io/repos/52815899/shield?style=flat" alt="StyleCI"></a>
 
   <a href="https://github.com/austintoddj/Canvas/issues"><img src="https://img.shields.io/github/issues/austintoddj/Canvas.svg" alt="GitHub Issues"></a>
 
-  <a href="https://packagist.org/packages/austintoddj/canvas"><img src="https://poser.pugx.org/austintoddj/canvas/downloads" alt="Total Downloads"></a>
+  <a href="https://packagist.org/packages/austintoddj/canvas" target="_blank"><img src="https://poser.pugx.org/austintoddj/canvas/downloads" alt="Total Downloads"></a>
 
   <a href="https://github.com/austintoddj/Canvas/stargazers"><img src="https://img.shields.io/github/stars/austintoddj/Canvas.svg" alt="Stars"></a>
 
   <a href="https://github.com/austintoddj/Canvas/network"><img src="https://img.shields.io/github/forks/austintoddj/Canvas.svg" alt="GitHub Forks"></a>
 
-  <a href="https://packagist.org/packages/austintoddj/canvas"><img src="https://poser.pugx.org/austintoddj/canvas/v/stable" alt="Latest Stable Version"></a>
+  <a href="https://packagist.org/packages/austintoddj/canvas" target="_blank"><img src="https://poser.pugx.org/austintoddj/canvas/v/stable" alt="Latest Stable Version"></a>
 
   <a href="https://github.com/austintoddj/Canvas/blob/master/LICENSE"><img src="https://poser.pugx.org/austintoddj/canvas/license" alt="License"></a>
 
