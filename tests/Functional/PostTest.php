@@ -29,12 +29,14 @@ class PostTest extends TestCase
 
     public function testItCreatesPost()
     {
+        $date = Carbon\Carbon::now();
+        
         $this->actingAs($this->user)->post('admin/post', [
             'title'         => 'example',
             'slug'          => 'foo',
             'subtitle'      => 'bar',
             'content'       => 'FooBar',
-            'published_at'  => Carbon\Carbon::now(),
+            'published_at'  => $date,
             'layout'        => 'frontend.blog.post',
         ]);
 
@@ -44,7 +46,7 @@ class PostTest extends TestCase
             'subtitle'      => 'bar',
             'content_raw'   => 'FooBar',
             'content_html'  => '<p>FooBar</p>',
-            'published_at'  => Carbon\Carbon::now(),
+            'published_at'  => $date,
             'layout'        => 'frontend.blog.post',
         ]);
 
