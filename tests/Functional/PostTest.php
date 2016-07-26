@@ -30,7 +30,7 @@ class PostTest extends TestCase
     public function testItCreatesPost()
     {
         $date = Carbon\Carbon::now();
-        
+
         $this->actingAs($this->user)->post('admin/post', [
             'title'         => 'example',
             'slug'          => 'foo',
