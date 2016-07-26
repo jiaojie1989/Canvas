@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class AdminRoutesTest
+ * Class AdminRoutesTest.
  *
  * Test the response code for each administrative route after login.
  */

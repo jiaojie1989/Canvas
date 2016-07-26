@@ -1,9 +1,6 @@
 <?php
 
-use App\Services\UploadsManager;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Mockery as M;
 
@@ -19,7 +16,7 @@ class UploadManagementTest extends TestCase
     private $user;
 
     /**
-     * A partial mock of the Null adaptor
+     * A partial mock of the Null adaptor.
      * @var Mockery\Mock
      */
     private $adaptor;
@@ -101,7 +98,7 @@ class UploadManagementTest extends TestCase
         // since the helper methods don't work when there are multiple forms with the same
         // button test we have to do do a little more work here
         $tmpFile = '/tmp/canvas-test-'.date('Y-m-d H:i:s').'.txt';
-        $testContent = "bar";
+        $testContent = 'bar';
         File::put($tmpFile, $testContent);
 
         $this->adaptor
@@ -112,7 +109,7 @@ class UploadManagementTest extends TestCase
         $this->uploads['file'] = $tmpFile;
         $form = $this->crawler()->filter('#fileCreate')->form()->setValues([
             'file'      => $tmpFile,
-            'file_name' => 'foo'
+            'file_name' => 'foo',
         ]);
 
         $this->makeRequestUsingForm($form, $this->uploads)

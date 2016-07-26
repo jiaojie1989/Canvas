@@ -2,13 +2,12 @@
 
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
 
 class TagTableSeeder extends Seeder
 {
     /**
-    * Seed the tags table with the Welcome tag.
-    */
+     * Seed the tags table with the Welcome tag.
+     */
     public function run()
     {
         Tag::truncate();

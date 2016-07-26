@@ -5,15 +5,13 @@ namespace App\Http\Controllers\Backend;
 use Auth;
 use Session;
 use App\Models\User;
-use App\Http\Requests;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileUpdateRequest;
 
 class ProfileController extends Controller
 {
     /**
-     * Display the user profile page
+     * Display the user profile page.
      *
      * @return \Illuminate\View\View
      */
@@ -27,7 +25,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Display the user profile edit page
+     * Display the user profile edit page.
      *
      * @param $id
      *
@@ -43,19 +41,19 @@ class ProfileController extends Controller
     }
 
     /**
-     * Display the user profile privacy page
+     * Display the user profile privacy page.
      *
      * @return \Illuminate\View\View
      */
     public function editPrivacy()
     {
         return view('backend.profile.privacy', [
-            "data" => array_merge(Auth::user()->toArray(), config('blog'))
+            'data' => array_merge(Auth::user()->toArray(), config('blog')),
         ]);
     }
 
     /**
-     * Update the user profile information
+     * Update the user profile information.
      *
      * @param ProfileUpdateRequest $request
      * @param $id
@@ -69,6 +67,7 @@ class ProfileController extends Controller
         $user->save();
 
         Session::set('_profile', trans('messages.update_success', ['entity' => 'Profile']));
+
         return redirect()->route('admin.profile.edit', $id);
     }
 }

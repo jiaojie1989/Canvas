@@ -1,9 +1,9 @@
 <?php
+
 namespace App\Http\Controllers\Auth;
 
 use Session;
 use Validator;
-use JsValidator;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -70,6 +70,7 @@ class AuthController extends Controller
     public function authenticated(\Illuminate\Http\Request $request, User $user)
     {
         Session::set('_login', trans('messages.login', ['first_name' => $user->first_name, 'last_name' => $user->last_name]));
+
         return redirect()->intended($this->redirectPath());
     }
 }

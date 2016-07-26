@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class PasswordTest
+ * Class PasswordTest.
  *
  * Test the application's ability to update and validate a password.
  */
@@ -26,7 +26,7 @@ class PasswordTest extends TestCase
     {
         $this->user = factory(App\Models\User::class)->create([
             'email'     => 'foo@bar.com',
-            'password'  => bcrypt('password')
+            'password'  => bcrypt('password'),
         ]);
     }
 
@@ -35,13 +35,13 @@ class PasswordTest extends TestCase
         $this->actingAs($this->user)->post('auth/password', [
             'password'                  => 'password',
             'new_password'              => 'newPass',
-            'new_password_confirmation' => 'newPass'
+            'new_password_confirmation' => 'newPass',
         ]);
 
         $this->assertSessionMissing('errors');
         $this->assertTrue(Auth::validate([
             'email'    => $this->user->email,
-            'password' => 'newPass'
+            'password' => 'newPass',
         ]));
     }
 
@@ -50,7 +50,7 @@ class PasswordTest extends TestCase
         $this->actingAs($this->user)->post('auth/password', [
             'password'                  => 'wrongPass',
             'new_password'              => 'newPass',
-            'new_password_confirmation' => 'newPass'
+            'new_password_confirmation' => 'newPass',
         ]);
 
         $this->assertEquals(Session::get('errors')->first(), trans('auth.failed'));

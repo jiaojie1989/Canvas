@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -41,7 +42,7 @@ class Tag extends Model
             static::create([
                 'tag' => $tag,
                 'title' => $tag,
-                'subtitle' => 'Subtitle for ' . $tag,
+                'subtitle' => 'Subtitle for '.$tag,
                 'meta_description' => '',
                 'reverse_direction' => false,
             ]);
@@ -58,6 +59,7 @@ class Tag extends Model
     public static function layout($tag, $default = 'blog.layouts.index')
     {
         $layout = static::whereTag($tag)->pluck('layout');
+
         return $layout ?: $default;
     }
 
@@ -65,7 +67,7 @@ class Tag extends Model
     {
         $tnt = new TNTSearch;
         $tnt->loadConfig(config('services.tntsearch'));
-        $tnt->selectIndex("tags.index");
+        $tnt->selectIndex('tags.index');
         $index = $tnt->getIndex();
         $index->insert($model->toArray());
     }
@@ -74,7 +76,7 @@ class Tag extends Model
     {
         $tnt = new TNTSearch;
         $tnt->loadConfig(config('services.tntsearch'));
-        $tnt->selectIndex("tags.index");
+        $tnt->selectIndex('tags.index');
         $index = $tnt->getIndex();
         $index->delete($model->id);
     }
@@ -83,14 +85,14 @@ class Tag extends Model
     {
         $tnt = new TNTSearch;
         $tnt->loadConfig(config('services.tntsearch'));
-        $tnt->selectIndex("tags.index");
+        $tnt->selectIndex('tags.index');
         $index = $tnt->getIndex();
         $index->update($model->id, $model->toArray());
     }
 
     public static function boot()
     {
-        if (file_exists(config('services.tntsearch.storage') . '/tags.index')
+        if (file_exists(config('services.tntsearch.storage').'/tags.index')
             && app('env') != 'testing') {
             self::created([__CLASS__, 'insertToIndex']);
             self::updated([__CLASS__, 'updateIndex']);

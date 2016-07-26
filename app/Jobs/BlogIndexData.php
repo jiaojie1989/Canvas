@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Jobs;
 
 use Carbon\Carbon;
@@ -11,7 +12,7 @@ class BlogIndexData extends Job implements SelfHandling
     protected $tag;
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param string|null $tag
      */
@@ -30,11 +31,12 @@ class BlogIndexData extends Job implements SelfHandling
         if ($this->tag) {
             return $this->tagIndexData($this->tag);
         }
+
         return $this->normalIndexData();
     }
 
     /**
-     * Return data for normal index page
+     * Return data for normal index page.
      *
      * @return array
      */
@@ -45,6 +47,7 @@ class BlogIndexData extends Job implements SelfHandling
             ->where('is_draft', 0)
             ->orderBy('published_at', 'desc')
             ->simplePaginate(config('blog.posts_per_page'));
+
         return [
             'title' => config('blog.title'),
             'subtitle' => config('blog.subtitle'),
@@ -57,7 +60,7 @@ class BlogIndexData extends Job implements SelfHandling
     }
 
     /**
-     * Return data for a tag index page
+     * Return data for a tag index page.
      *
      * @param string $tag
      * @return array
@@ -66,7 +69,7 @@ class BlogIndexData extends Job implements SelfHandling
     {
         $tag = Tag::where('tag', $tag)->firstOrFail();
 
-        $reverse_direction = (bool)$tag->reverse_direction;
+        $reverse_direction = (bool) $tag->reverse_direction;
 
         $posts = Post::where('published_at', '<=', Carbon::now())
             ->whereHas('tags', function ($q) use ($tag) {
@@ -79,7 +82,7 @@ class BlogIndexData extends Job implements SelfHandling
         $posts->addQuery('tag', $tag->tag);
 
         $page_image = $tag->page_image ?: config('blog.page_image');
-        
+
         return [
             'title' => $tag->title,
             'subtitle' => $tag->subtitle,

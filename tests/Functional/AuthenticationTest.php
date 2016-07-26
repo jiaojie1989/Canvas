@@ -1,13 +1,12 @@
 <?php
 
 /**
- * Class AuthenticationTest
+ * Class AuthenticationTest.
  *
  * Test the login and logout functionality of the application.
  */
 class AuthenticationTest extends TestCase
 {
-
     use InteractsWithDatabase;
 
     /**
@@ -26,7 +25,6 @@ class AuthenticationTest extends TestCase
     public function createUser()
     {
         $this->user = factory(App\Models\User::class)->create();
-
     }
 
     /**
@@ -57,5 +55,4 @@ class AuthenticationTest extends TestCase
              ->seePageis('/auth/login')
              ->dontSeeIsAuthenticated();
     }
-
 }

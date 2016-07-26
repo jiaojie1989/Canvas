@@ -15,7 +15,7 @@ class SearchController extends Controller
     public function index(Search $search)
     {
         $posts = $search->posts();
-        $tags  = $search->tags();
+        $tags = $search->tags();
 
         return view('backend.search.index', compact('posts', 'tags'));
     }

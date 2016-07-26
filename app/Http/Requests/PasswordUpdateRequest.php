@@ -1,9 +1,9 @@
 <?php
+
 namespace App\Http\Requests;
 
 class PasswordUpdateRequest extends Request
 {
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -23,7 +23,7 @@ class PasswordUpdateRequest extends Request
     {
         return [
             'password'     => 'required',
-            'new_password' => 'required|confirmed|min:6'
+            'new_password' => 'required|confirmed|min:6',
         ];
     }
 }

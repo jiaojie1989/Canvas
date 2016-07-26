@@ -8,12 +8,11 @@
 | Create a user model in the database.
 |
 */
-$factory->define(App\Models\User::class, function(Faker\Generator $faker) {
-
+$factory->define(App\Models\User::class, function (Faker\Generator $faker) {
     return [
         'first_name'    => $first = $faker->firstName,
         'last_name'     => $last = $faker->lastName,
-        'display_name'  => $first . ' ' . $last,
+        'display_name'  => $first.' '.$last,
         'job'           => $faker->jobTitle,
         'birthday'      => $faker->date('Y-m-d'),
         'email'         => $faker->safeEmail,
@@ -38,7 +37,7 @@ $factory->define(App\Models\User::class, function(Faker\Generator $faker) {
 |
 */
 $factory->define(App\Models\Post::class, function ($faker) {
-  return [
+    return [
     'title'             => 'Hello world',
     'slug'              => 'hello-world',
     'subtitle'          => 'Canvas is a minimal blogging application for developers. Canvas attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing.',
@@ -59,7 +58,7 @@ $factory->define(App\Models\Post::class, function ($faker) {
 |
 */
 $factory->define(App\Models\Tag::class, function ($faker) {
-  return [
+    return [
     'tag'               => 'Getting Started',
     'title'             => 'Getting Started',
     'subtitle'          => 'Getting started with Canvas',

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Jobs;
 
 use Carbon\Carbon;
@@ -9,13 +10,13 @@ use Illuminate\Contracts\Bus\SelfHandling;
 class PostFormFields extends Job implements SelfHandling
 {
     /**
-     * The id (if any) of the Post row
+     * The id (if any) of the Post row.
      *
-     * @var integer
+     * @var int
      */
     protected $id;
     /**
-     * List of fields and default value for each field
+     * List of fields and default value for each field.
      *
      * @var array
      */
@@ -26,7 +27,7 @@ class PostFormFields extends Job implements SelfHandling
         'page_image' => '',
         'content' => '',
         'meta_description' => '',
-        'is_draft' => "0",
+        'is_draft' => '0',
         'publish_date' => '',
         'publish_time' => '',
         'published_at' => '',
@@ -38,7 +39,7 @@ class PostFormFields extends Job implements SelfHandling
     /**
      * Create a new command instance.
      *
-     * @param integer $id
+     * @param int $id
      */
     public function __construct($id = null)
     {
@@ -63,6 +64,7 @@ class PostFormFields extends Job implements SelfHandling
         foreach ($fields as $fieldName => $fieldValue) {
             $fields[$fieldName] = old($fieldName, $fieldValue);
         }
+
         return array_merge(
             $fields,
             ['allTags' => Tag::lists('tag')->all()]
@@ -70,9 +72,9 @@ class PostFormFields extends Job implements SelfHandling
     }
 
     /**
-     * Return the field values from the model
+     * Return the field values from the model.
      *
-     * @param integer $id
+     * @param int $id
      * @param array $fields
      * @return array
      */
@@ -85,6 +87,7 @@ class PostFormFields extends Job implements SelfHandling
             $fields[$field] = $post->{$field};
         }
         $fields['tags'] = $post->tags()->lists('tag')->all();
+
         return $fields;
     }
 }

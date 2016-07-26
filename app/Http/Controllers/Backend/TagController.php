@@ -1,17 +1,15 @@
 <?php
+
 namespace App\Http\Controllers\Backend;
 
 use Session;
 use App\Models\Tag;
-use App\Http\Requests;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagUpdateRequest;
 use App\Http\Requests\TagCreateRequest;
 
 class TagController extends Controller
 {
-
     protected $fields = [
         'tag' => '',
         'title' => '',
@@ -24,7 +22,7 @@ class TagController extends Controller
     ];
 
     /**
-     * Display a listing of the resource
+     * Display a listing of the resource.
      *
      * @return \Illuminate\View\View
      */
@@ -36,7 +34,7 @@ class TagController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource
+     * Show the form for creating a new resource.
      *
      * @return \Illuminate\View\View
      */
@@ -52,7 +50,7 @@ class TagController extends Controller
     }
 
     /**
-     * Store the newly created tag in the database
+     * Store the newly created tag in the database.
      *
      * @param TagCreateRequest $request
      *
@@ -65,11 +63,12 @@ class TagController extends Controller
         $tag->save();
 
         Session::set('_new-tag', trans('messages.create_success', ['entity' => 'tag']));
+
         return redirect('/admin/tag');
     }
 
     /**
-     * Show the form for editing a tag
+     * Show the form for editing a tag.
      *
      * @param  int $id
      *
@@ -87,7 +86,7 @@ class TagController extends Controller
     }
 
     /**
-     * Update the tag in storage
+     * Update the tag in storage.
      *
      * @param TagUpdateRequest $request
      * @param int $id
@@ -101,11 +100,12 @@ class TagController extends Controller
         $tag->save();
 
         Session::set('_update-tag', trans('messages.update_success', ['entity' => 'Tag']));
+
         return redirect("/admin/tag/$id/edit");
     }
 
     /**
-     * Delete the tag
+     * Delete the tag.
      *
      * @param  int $id
      *
@@ -117,6 +117,7 @@ class TagController extends Controller
         $tag->delete();
 
         Session::set('_delete-tag', trans('messages.delete_success', ['entity' => 'Tag']));
+
         return redirect('/admin/tag');
     }
 }

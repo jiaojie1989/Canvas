@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use Auth;
 use Session;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
 
 class PasswordController extends Controller
@@ -24,12 +23,12 @@ class PasswordController extends Controller
     {
         $this->validate($request, [
             'password'     => 'required',
-            'new_password' => 'required|confirmed|min:6'
+            'new_password' => 'required|confirmed|min:6',
         ]);
 
         $guard = Auth::guard();
 
-        if (!$guard->validate($request->only('password'))) {
+        if (! $guard->validate($request->only('password'))) {
             return back()->withErrors(trans('auth.failed'));
         }
 
@@ -38,6 +37,7 @@ class PasswordController extends Controller
         $user->save();
 
         Session::set('_passwordUpdate', trans('messages.update_success', ['entity' => 'Your password']));
+
         return back();
     }
 }

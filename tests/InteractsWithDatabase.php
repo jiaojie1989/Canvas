@@ -4,7 +4,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 trait InteractsWithDatabase
 {
-
     use DatabaseTransactions;
 
     /**
@@ -12,14 +11,13 @@ trait InteractsWithDatabase
      *
      * @return void
      */
-    protected function setUp() {
-
+    protected function setUp()
+    {
         parent::setUp();
 
         $this->runDatabaseMigrations();
 
         $this->seed(TestDatabaseSeeder::class);
-
     }
 
     /**
@@ -35,5 +33,4 @@ trait InteractsWithDatabase
             $this->artisan('migrate:reset');
         });
     }
-
 }

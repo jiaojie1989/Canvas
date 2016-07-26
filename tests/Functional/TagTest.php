@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class TagTest
+ * Class TagTest.
  *
  * Test the application's tag CRUD.
  */
@@ -35,7 +35,7 @@ class TagTest extends TestCase
             'subtitle'          => 'bar',
             'meta_description'  => 'FooBar',
             'layout'            => 'frontend.blog.index',
-            'reverse_direction' => 0
+            'reverse_direction' => 0,
         ]);
 
         $this->seeInDatabase('tags', [
@@ -44,7 +44,7 @@ class TagTest extends TestCase
             'subtitle'          => 'bar',
             'meta_description'  => 'FooBar',
             'layout'            => 'frontend.blog.index',
-            'reverse_direction' => 0
+            'reverse_direction' => 0,
         ]);
 
         $this->assertSessionHas('_new-tag', trans('messages.create_success', ['entity' => 'tag']));

@@ -53,9 +53,9 @@ class UsersTableSeeder extends Seeder
             */
             'phone'         => '(000) 111-0000',
             'email'         => 'admin@canvas.com',
-            'twitter'       => 'username',      # Example: https://twitter.com/username
-            'facebook'      => 'username',      # Example: https://facebook.com/username
-            'github'        => 'username',      # Example: https://github.com/username
+            'twitter'       => 'username',      // Example: https://twitter.com/username
+            'facebook'      => 'username',      // Example: https://facebook.com/username
+            'github'        => 'username',      // Example: https://github.com/username
             'address'       => '1200 Main Street',
             'city'          => 'Minneapolis',
             'country'       => 'USA',
@@ -74,7 +74,7 @@ class UsersTableSeeder extends Seeder
             |--------------------------------------------------------------------------
             */
             'created_at'    => Carbon\Carbon::now(),
-            'updated_at'    => Carbon\Carbon::now()
+            'updated_at'    => Carbon\Carbon::now(),
         ]);
     }
 }

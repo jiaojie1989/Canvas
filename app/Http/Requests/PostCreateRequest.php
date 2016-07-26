@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Requests;
 
 class PostCreateRequest extends Request
@@ -29,7 +30,7 @@ class PostCreateRequest extends Request
     }
 
     /**
-     * Return the fields and values to create a new post from
+     * Return the fields and values to create a new post from.
      */
     public function postFillData()
     {
@@ -40,7 +41,7 @@ class PostCreateRequest extends Request
             'page_image' => $this->page_image,
             'content_raw' => $this->get('content'),
             'meta_description' => $this->meta_description,
-            'is_draft' => (bool)$this->is_draft,
+            'is_draft' => (bool) $this->is_draft,
             'published_at' => $this->published_at,
             'layout' => $this->layout,
         ];

@@ -1,9 +1,9 @@
 <?php
+
 namespace App\Http\Controllers\Backend;
 
 use Session;
 use App\Models\Post;
-use App\Http\Requests;
 use App\Jobs\PostFormFields;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostCreateRequest;
@@ -11,9 +11,8 @@ use App\Http\Requests\PostUpdateRequest;
 
 class PostController extends Controller
 {
-
     /**
-     * Display a listing of the posts
+     * Display a listing of the posts.
      *
      * @return \Illuminate\View\View
      */
@@ -25,18 +24,19 @@ class PostController extends Controller
     }
 
     /**
-     * Show the new post form
+     * Show the new post form.
      *
      * @return \Illuminate\View\View
      */
     public function create()
     {
         $data = $this->dispatch(new PostFormFields());
+
         return view('backend.post.create', $data);
     }
 
     /**
-     * Store a newly created Post
+     * Store a newly created Post.
      *
      * @param PostCreateRequest $request
      *
@@ -48,11 +48,12 @@ class PostController extends Controller
         $post->syncTags($request->get('tags', []));
 
         Session::set('_new-post', trans('messages.create_success', ['entity' => 'post']));
+
         return redirect()->route('admin.post.index');
     }
 
     /**
-     * Show the post edit form
+     * Show the post edit form.
      *
      * @param  int $id
      *
@@ -61,11 +62,12 @@ class PostController extends Controller
     public function edit($id)
     {
         $data = $this->dispatch(new PostFormFields($id));
+
         return view('backend.post.edit', $data);
     }
 
     /**
-     * Update the Post
+     * Update the Post.
      *
      * @param PostUpdateRequest $request
      * @param int $id
@@ -80,6 +82,7 @@ class PostController extends Controller
         $post->syncTags($request->get('tags', []));
 
         Session::set('_update-post', trans('messages.update_success', ['entity' => 'Post']));
+
         return redirect("/admin/post/$id/edit");
     }
 
@@ -97,6 +100,7 @@ class PostController extends Controller
         $post->delete();
 
         Session::set('_delete-post', trans('messages.delete_success', ['entity' => 'Post']));
+
         return redirect()->route('admin.post.index');
     }
 }

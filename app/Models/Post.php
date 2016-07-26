@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use App\Services\Parsedowner;
@@ -42,8 +43,8 @@ class Post extends Model
      */
     public function setContentRawAttribute($value)
     {
-        $markdown                         = new Parsedowner();
-        $this->attributes['content_raw']  = $value;
+        $markdown = new Parsedowner();
+        $this->attributes['content_raw'] = $value;
         $this->attributes['content_html'] = $markdown->toHTML($value);
     }
 
@@ -59,6 +60,7 @@ class Post extends Model
             $this->tags()->sync(
                 Tag::whereIn('tag', $tags)->lists('id')->all()
             );
+
             return;
         }
         $this->tags()->detach();
@@ -84,10 +86,11 @@ class Post extends Model
      */
     public function url(Tag $tag = null)
     {
-        $url = url('blog/' . $this->slug);
+        $url = url('blog/'.$this->slug);
         if ($tag) {
-            $url .= '?tag=' . urlencode($tag->tag);
+            $url .= '?tag='.urlencode($tag->tag);
         }
+
         return $url;
     }
 
@@ -99,12 +102,13 @@ class Post extends Model
      */
     public function tagLinks($base = '/blog?tag=%TAG%')
     {
-        $tags   = $this->tags()->lists('tag');
+        $tags = $this->tags()->lists('tag');
         $return = [];
         foreach ($tags as $tag) {
-            $url      = str_replace('%TAG%', urlencode($tag), $base);
-            $return[] = '<a href="' . url($url) . '">' . e($tag) . '</a>';
+            $url = str_replace('%TAG%', urlencode($tag), $base);
+            $return[] = '<a href="'.url($url).'">'.e($tag).'</a>';
         }
+
         return $return;
     }
 
@@ -126,6 +130,7 @@ class Post extends Model
                 $q->where('tag', '=', $tag->tag);
             });
         }
+
         return $query->first();
     }
 
@@ -146,6 +151,7 @@ class Post extends Model
                 $q->where('tag', '=', $tag->tag);
             });
         }
+
         return $query->first();
     }
 
@@ -153,7 +159,7 @@ class Post extends Model
     {
         $tnt = new TNTSearch;
         $tnt->loadConfig(config('services.tntsearch'));
-        $tnt->selectIndex("posts.index");
+        $tnt->selectIndex('posts.index');
         $index = $tnt->getIndex();
         $index->insert($model->toArray());
     }
@@ -162,7 +168,7 @@ class Post extends Model
     {
         $tnt = new TNTSearch;
         $tnt->loadConfig(config('services.tntsearch'));
-        $tnt->selectIndex("posts.index");
+        $tnt->selectIndex('posts.index');
         $index = $tnt->getIndex();
         $index->delete($model->id);
     }
@@ -171,14 +177,14 @@ class Post extends Model
     {
         $tnt = new TNTSearch;
         $tnt->loadConfig(config('services.tntsearch'));
-        $tnt->selectIndex("posts.index");
+        $tnt->selectIndex('posts.index');
         $index = $tnt->getIndex();
         $index->update($model->id, $model->toArray());
     }
 
     public static function boot()
     {
-        if (file_exists(config('services.tntsearch.storage') . '/posts.index')
+        if (file_exists(config('services.tntsearch.storage').'/posts.index')
             && app('env') != 'testing') {
             self::created([__CLASS__, 'insertToIndex']);
             self::updated([__CLASS__, 'updateIndex']);

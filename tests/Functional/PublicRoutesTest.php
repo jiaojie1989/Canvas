@@ -1,13 +1,12 @@
 <?php
 
 /**
- * Class PublicRoutesTest
+ * Class PublicRoutesTest.
  *
  * Test the response code for each publicly accessible route.
  */
 class PublicRoutesTest extends TestCase
 {
-
     use InteractsWithDatabase;
 
     /**
