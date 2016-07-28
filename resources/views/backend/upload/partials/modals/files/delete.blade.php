@@ -9,7 +9,7 @@
                 <p>Are you sure you want to delete the file <b><span id="delete-file-name1"></span></b>?</p>
             </div>
             <div class="modal-footer">
-                <form method="POST" action="{{url('admin/upload/file')}}">
+                <form method="POST" action="{{ url('admin/upload/file') }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="folder" value="{{ $folder }}">

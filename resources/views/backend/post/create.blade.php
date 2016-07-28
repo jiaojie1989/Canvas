@@ -14,8 +14,8 @@
                 <div class="card">
                     <div class="card-header">
                         <ol class="breadcrumb">
-                            <li><a href="{{url('admin')}}">Home</a></li>
-                            <li><a href="{{url('admin/post')}}">Posts</a></li>
+                            <li><a href="{{ url('admin') }}">Home</a></li>
+                            <li><a href="{{ url('admin/post') }}">Posts</a></li>
                             <li class="active">New Post</li>
                         </ol>
 
@@ -37,7 +37,7 @@
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-icon-text"><i class="zmdi zmdi-floppy"></i> Save</button>
                                 &nbsp;
-                                <a href="{{url('admin/post')}}"><button type="button" class="btn btn-link">Cancel</button></a>
+                                <a href="{{ url('admin/post') }}"><button type="button" class="btn btn-link">Cancel</button></a>
                             </div>
                         </form>
                     </div>

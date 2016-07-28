@@ -12,7 +12,7 @@
                 <div class="card">
                     <div class="card-header">
                         <ol class="breadcrumb">
-                            <li><a href="{{url('admin')}}">Home</a></li>
+                            <li><a href="{{ url('admin') }}">Home</a></li>
                             <li class="active">Posts</li>
                         </ol>
                         <ul class="actions">
@@ -33,7 +33,7 @@
                         @include('shared.success')
 
                         <h2>Manage Posts&nbsp;
-                            <a href="{{url('admin/post/create')}}"><i class="zmdi zmdi-plus-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Create a new post"></i></a>
+                            <a href="{{ url('admin/post/create') }}"><i class="zmdi zmdi-plus-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Create a new post"></i></a>
 
                             <small>This page provides a comprehensive overview of all current blog posts. Click the edit or preview links next to each post to modify specific details, publish a post or view any changes from the browser.</small>
                         </h2>

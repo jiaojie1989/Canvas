@@ -25,14 +25,14 @@
                     <div class="pm-body clearfix">
                         @section('profile-content')
                             <ul class="tab-nav tn-justified">
-                                <li class="{{Route::is('admin.profile.index') ? 'active' : ''}}">
-                                    <a href="{{url('admin/profile')}}">Profile</a>
+                                <li class="{{ Route::is('admin.profile.index') ? 'active' : '' }}">
+                                    <a href="{{ url('admin/profile') }}">Profile</a>
                                 </li>
-                                <li class="{{Route::is('admin.profile.edit') ? 'active' : ''}}">
-                                    <a href="{{url('/admin/profile')}}/{{ Auth::id() }}/edit">Settings</a>
+                                <li class="{{ Route::is('admin.profile.edit') ? 'active' : '' }}">
+                                    <a href="{{ url('/admin/profile') }}/{{ Auth::id() }}/edit">Settings</a>
                                 </li>
-                                <li class="{{Route::is('admin.profile.privacy') ? 'active' : ''}}">
-                                    <a href="{{url('admin/profile/privacy')}}">Privacy</a>
+                                <li class="{{ Route::is('admin.profile.privacy') ? 'active' : '' }}">
+                                    <a href="{{ url('admin/profile/privacy') }}">Privacy</a>
                                 </li>
                             </ul>
 

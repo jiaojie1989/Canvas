@@ -5,7 +5,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title">Upload a File</h4>
                 </div>
-                <form method="POST" action="{{url('admin/upload/file')}}" class="form-horizontal" enctype="multipart/form-data" id="fileCreate">
+                <form method="POST" action="{{ url('admin/upload/file') }}" class="form-horizontal" enctype="multipart/form-data" id="fileCreate">
                     <div class="modal-body">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="folder" value="{{ $folder }}">

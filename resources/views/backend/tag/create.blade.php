@@ -14,8 +14,8 @@
                 <div class="card">
                     <div class="card-header">
                         <ol class="breadcrumb">
-                            <li><a href="{{url('admin')}}">Home</a></li>
-                            <li><a href="{{url('admin/tag')}}">Tags</a></li>
+                            <li><a href="{{ url('admin') }}">Home</a></li>
+                            <li><a href="{{ url('admin/tag') }}">Tags</a></li>
                             <li class="active">New Tag</li>
                         </ol>
                         <ul class="actions">
@@ -39,7 +39,7 @@
 
                     </div>
                     <div class="card-body card-padding">
-                        <form class="keyboard-save" role="form" method="POST" id="tagUpdate" action="{{url('admin/tag')}}">
+                        <form class="keyboard-save" role="form" method="POST" id="tagUpdate" action="{{ url('admin/tag') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             @include('backend.tag.partials.form')
@@ -47,7 +47,7 @@
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-icon-text"><i class="zmdi zmdi-floppy"></i> Save</button>
                                 &nbsp;
-                                <a href="{{url('admin/tag')}}"><button type="button" class="btn btn-link">Cancel</button></a>
+                                <a href="{{ url('admin/tag') }}"><button type="button" class="btn btn-link">Cancel</button></a>
                             </div>
                         </form>
                     </div>

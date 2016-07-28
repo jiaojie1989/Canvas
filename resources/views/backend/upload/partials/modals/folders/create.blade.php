@@ -5,7 +5,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title">Create a new folder</h4>
                 </div>
-                <form method="POST" action="{{url('admin/upload/folder')}}" class="form-horizontal" id="folderCreate">
+                <form method="POST" action="{{ url('admin/upload/folder') }}" class="form-horizontal" id="folderCreate">
                     <div class="modal-body">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="folder" value="{{ $folder }}">
