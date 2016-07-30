@@ -57,7 +57,7 @@ If you chose Option 1, skip this step. If you chose Option 2, run the following 
 composer install
 ```
 
-To enable uploads on the site, give ownership of the uploads directory to the web server:
+To enable uploads on the blog, give ownership of the uploads directory to the web server:
 
 ```sh
 sudo chown -R www-data:www-data public/uploads
