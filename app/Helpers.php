@@ -1,22 +1,25 @@
 <?php
 /**
- * Process a url and make it SEO compliant.
+ * Process a URL and make it SEO compliant.
  *
- * @param $string
+ * @param $url
  * @return string
  */
-function seoUrl($string)
+function seoUrl($url)
 {
-    // Make the string lowercase
-    $string = strtolower($string);
-    // Make the string alphanumeric (removes all other characters)
-    $string = preg_replace("/[^a-z0-9_\s-]/", '', $string);
-    // Clean up multiple dashes or whitespaces
-    $string = preg_replace("/[\s-]+/", ' ', $string);
-    // Convert whitespaces and underscores to dashes
-    $string = preg_replace("/[\s_]/", '-', $string);
+    // Make the URL lowercase
+    $url = strtolower($url);
 
-    return $string;
+    // Make the string alphanumeric (removes all other characters)
+    $url = preg_replace("/[^a-z0-9_\s-]/", '', $url);
+
+    // Clean up multiple dashes or whitespaces
+    $url = preg_replace("/[\s-]+/", ' ', $url);
+
+    // Convert whitespaces and underscores to dashes
+    $url = preg_replace("/[\s_]/", '-', $url);
+
+    return $url;
 }
 
 /**
