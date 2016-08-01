@@ -5,6 +5,6 @@
 
     $('#editor').summernote({
         placeholder: 'Content',
-        height: 300,
+        height: 500,
     });
 </script>
