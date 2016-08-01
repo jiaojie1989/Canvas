@@ -11,8 +11,6 @@
 
 <a href="http://canvas.toddaustin.io">Canvas</a> is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing.
 
-# Basic Setup
-
 ## Requirements
 
 Since Canvas is built on Laravel 5.2, there are a few system requirements:
