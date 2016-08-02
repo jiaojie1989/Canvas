@@ -121,7 +121,7 @@ Once you have registered your site and have a shortname, use it to set the `DISQ
 
 ## Contributing
 
-Thank you for considering contributing to Canvas! The contribution guide can be found [here](https://github.com/austintoddj/Canvas/blob/master/CONTRIBUTING.md).
+Thank you for considering contributing to Canvas! The contribution guide can be found [here](https://github.com/austintoddj/Canvas/blob/master/CONTRIBUTING.md) and also has details about joining the official [HipChat group](https://canvas-blog.hipchat.com/home) for those who want to be a part of Canvas' future development.
 
 ## Changelog
 

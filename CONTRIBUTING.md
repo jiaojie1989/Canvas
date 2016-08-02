@@ -2,6 +2,10 @@
 
 Hi! I’m really excited that you are interested in contributing to Canvas. Before submitting your contribution though, please make sure to take a moment and read through the following guidelines.
 
+## Slack
+
+Canvas has an official [HipChat group](https://canvas-blog.hipchat.com/home) to be used as an open forum for those who want to contribute and collaborate on the project. If you'd like to be added to the team, [contact me](mailto:austin.todd.j@gmail.com) and I'll get you set up! 
+
 ## Issue Reporting Guidelines
 
 - Try to search for your issue, it may have already been answered or even fixed in the master branch.
@@ -14,7 +18,7 @@ Hi! I’m really excited that you are interested in contributing to Canvas. Befo
 
 ## Pull Request Guidelines
 
-- Keep the commit as small and modular as possible. If your PR addresses more than one issue, create separate requests.
+- Keep the commit as small and modular as possible. If your pull request addresses more than one issue, create separate requests.
 
 - Squash the commit if there are too many small ones.
 
@@ -31,7 +35,7 @@ Hi! I’m really excited that you are interested in contributing to Canvas. Befo
     - Provide convincing reason to add this feature.
 
 - If fixing a bug:
-    - Provide detailed description of the bug in the PR.
+    - Provide detailed description of the bug in the pull request.
     - Add appropriate test coverage if applicable.
 
 ## Code Style
@@ -44,4 +48,4 @@ Hi! I’m really excited that you are interested in contributing to Canvas. Befo
 
 - When in doubt, read the source code.
 
-*If anyone has a code style they would like to see adhered to in this project, send me a message and we can look into adding it.*
+*If anyone has a code style they would like to see adhered to in this project, [send me a message](mailto:austin.todd.j@gmail.com) and we can look into adding it.*
