@@ -53,6 +53,10 @@
                                     <i class="zmdi zmdi-floppy"></i> Save
                                 </button>
                                 &nbsp;
+                                <a type="button" class="btn btn-success btn-icon-text" href="{{ url('blog/' . $slug) }}" target="_blank">
+                                    <i class="zmdi zmdi-search"></i> Preview
+                                </a>
+                                &nbsp;
                                 <button type="button" class="btn btn-danger btn-icon-text" data-toggle="modal" data-target="#modal-delete">
                                     <i class="zmdi zmdi-delete"></i> Delete
                                 </button>
