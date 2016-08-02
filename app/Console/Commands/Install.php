@@ -45,27 +45,27 @@ class Install extends Command
         // Blog Title
         $blogTitle = $this->ask('Step 1: Title of your blog');
         $this->title($blogTitle, $config);
-        $this->info(PHP_EOL.'Success! The blog title has been saved.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! The blog title has been saved.');
 
         // Blog Subtitle
         $blogSubtitle = $this->ask('Step 2: Subtitle of your blog');
         $this->subtitle($blogSubtitle, $config);
-        $this->info(PHP_EOL.'Success! The blog subtitle has been saved.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! The blog subtitle has been saved.');
 
         // Blog Description
         $blogDescription = $this->ask('Step 3: Description of your blog');
         $this->description($blogDescription, $config);
-        $this->info(PHP_EOL.'Success! The blog description has been saved.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! The blog description has been saved.');
 
         // Blog Author
         $blogAuthor = $this->ask('Step 4: Author of your blog');
         $this->author($blogAuthor, $config);
-        $this->info(PHP_EOL.'Success! The author name has been saved.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! The author name has been saved.');
 
         // Posts Per Page
         $postsPerPage = $this->ask('Step 5: Number of posts to display on the Blog Index page');
         $this->postsPerPage($postsPerPage, $config);
-        $this->info(PHP_EOL.'Success! The number of posts per page has been saved.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! The number of posts per page has been saved.');
 
         // Admin User Creation
         $this->comment(PHP_EOL.'Creating the admin user...');
@@ -73,18 +73,18 @@ class Install extends Command
             '--seed' => true,
         ]);
         $this->progress(5);
-        $this->info(PHP_EOL.'Success! The admin user has been created.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! The admin user has been created.');
 
         // Application Key Generation
         $this->comment(PHP_EOL.'Creating a unique application key...');
         $exitCode = Artisan::call('key:generate');
         $this->progress(5);
-        $this->info(PHP_EOL.'Success! A unique application key has been generated.');
+        $this->line(PHP_EOL.'<info>✔</info> Success! A unique application key has been generated.');
 
         $this->comment(PHP_EOL.'Finishing up the installation...');
         $this->progress(5);
 
-        $this->info(PHP_EOL.'Canvas has been successfully installed! Happy blogging!'.PHP_EOL);
+        $this->line(PHP_EOL.'<info>✔</info> Canvas has been successfully installed! Happy blogging!'.PHP_EOL);
 
         $config->save();
     }
