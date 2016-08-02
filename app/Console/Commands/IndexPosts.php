@@ -33,10 +33,10 @@ class IndexPosts extends Command
         $this->tnt->loadConfig(config('services.tntsearch'));
 
         $this->createPostsIndex();
-        $this->info('Success! The posts index has been completed.');
+        $this->line('<info>✔</info> Success! The posts index has been completed.');
 
         $this->createTagsIndex();
-        $this->info('Success! The tags index has been completed.');
+        $this->line('<info>✔</info> Success! The tags index has been completed.');
     }
 
     public function createPostsIndex()
