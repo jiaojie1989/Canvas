@@ -119,6 +119,10 @@ To enable Disqus comments on your blog, you need to have a unique shortname. For
 
 Once you have registered your site and have a shortname, use it to set the `DISQUS_NAME` key in your `.env` file.
 
+## Contributing
+
+Thank you for considering contributing to Canvas! The contribution guide can be found [here](https://github.com/austintoddj/Canvas/blob/master/CONTRIBUTING.md).
+
 ## Changelog
 
 Detailed changes for each release are documented in the [release notes](https://github.com/austintoddj/Canvas/releases).
