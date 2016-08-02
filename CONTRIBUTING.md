@@ -2,7 +2,7 @@
 
 Hi! I’m really excited that you are interested in contributing to Canvas. Before submitting your contribution though, please make sure to take a moment and read through the following guidelines.
 
-## Slack
+## HipChat
 
 Canvas has an official [HipChat group](https://canvas-blog.hipchat.com/home) to be used as an open forum for those who want to contribute and collaborate on the project. If you'd like to be added to the team, [contact me](mailto:austin.todd.j@gmail.com) and I'll get you set up! 
 
