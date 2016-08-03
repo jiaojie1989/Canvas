@@ -1,4 +1,4 @@
-#Canvas
+# Canvas
 
 <a href="https://travis-ci.org/austintoddj/Canvas" target="_blank"><img src="https://travis-ci.org/austintoddj/Canvas.svg?branch=master" alt="Build Status"></a> 
 <a href="https://styleci.io/repos/52815899" target="_blank"><img src="https://styleci.io/repos/52815899/shield?style=flat" alt="StyleCI"></a>
