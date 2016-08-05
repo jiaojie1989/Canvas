@@ -71,6 +71,14 @@ class PostTest extends TestCase
             ->seeInDatabase('posts', ['title' => 'Foo']);
     }
 
+    public function testPostsCanBePreviewed()
+    {
+        $this->actingAs($this->user)
+            ->visit(route('admin.post.edit', 1))
+            ->click('Preview');
+        $this->seePageIs('blog/hello-world');
+    }
+
     public function testPostsCanBeDeleted()
     {
         $this->actingAs($this->user)
