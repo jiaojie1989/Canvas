@@ -48,7 +48,7 @@
 @stop
 
 @section('unique-js')
-    @include('backend.post.partials.summernote')
+    @include('backend.post.partials.editor')
 
     {!! JsValidator::formRequest('App\Http\Requests\PostCreateRequest', '#postCreate'); !!}
 
