@@ -1,60 +1,62 @@
 <style type="text/css">
-    .editor-toolbar.fullscreen{
+    .editor-toolbar.fullscreen {
         top: 70px;
         z-index: 12;
     }
 
-    .editor-preview-side{
+    .editor-preview-side {
         top: 120px;
         z-index: 12;
     }
 
-    .CodeMirror-fullscreen{
-        top: 120px;   
+    .CodeMirror-fullscreen {
+        top: 120px;
         z-index: 11;
     }
-</style>
 
+    .CodeMirror {
+        height: 500px;
+    }
+</style>
 <div id="guide" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Markdown guide</h4>
             </div>
             <div class="modal-body">
-                    <h4>Emphasis</h4>
-                    <pre>**<strong>bold</strong>**
+                <h4>Emphasis</h4>
+                <pre>**<strong>bold</strong>**
 *<em>italics</em>*
 ~~<strike>strikethrough</strike>~~</pre>
-
-                    <h4>Headers</h4>
-                    <pre># Big header
+                <h4>Headers</h4>
+                <pre># Big header
 ## Medium header
 ### Small header
 #### Tiny header</pre>
-
-                    <h4>Lists</h4>
-                    <pre>* Generic list item
+                <h4>Lists</h4>
+                <pre>* Generic list item
 * Generic list item
 * Generic list item
 
 1. Numbered list item
 2. Numbered list item
 3. Numbered list item</pre>
-
-                    <h4>Links</h4>
-                    <pre>[Text to display](http://www.example.com)</pre>
-
-                    <h4>Quotes</h4>
-                    <pre>&gt; This is a quote.
+                <h4>Links</h4>
+                <pre>[Text to display](http://www.example.com)</pre>
+                <h4>Quotes</h4>
+                <pre>&gt; This is a quote.
 &gt; It can span multiple lines!</pre>
-
-                    <h4>Images &nbsp; <small>Need to upload an image? <a href="http://imgur.com/" target="_blank">Imgur</a> has a great interface.</small></h4>
-                    <pre>![](http://www.example.com/image.jpg)</pre>
-
-                    <h4>Tables</h4>
-                    <pre>| Column 1 | Column 2 | Column 3 |
+                <h4>Images &nbsp;
+                    <small>Need to upload an image? <a href="http://imgur.com/" target="_blank">Imgur</a> has a great
+                        interface.
+                    </small>
+                </h4>
+                <pre>![](http://www.example.com/image.jpg)</pre>
+                <h4>Tables</h4>
+                <pre>| Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
 | John     | Doe      | Male     |
 | Mary     | Smith    | Female   |
@@ -66,9 +68,8 @@
 | John | Doe | Male |
 | Mary | Smith | Female |
 </pre>
-
-                    <h4>Displaying code</h4>
-                    <pre>`var example = "hello!";`
+                <h4>Displaying code</h4>
+                <pre>`var example = "hello!";`
 
 <em>Or spanning multiple lines...</em>
 
@@ -83,10 +84,9 @@ alert(example);
         </div>
     </div>
 </div>
-
 <script type="text/javascript">
-    $(document).ready(function(){
-        var toggleGuide = function() {
+    $(document).ready(function () {
+        var toggleGuide = function () {
             $('#guide').modal('show');
         }
         var simplemde = new SimpleMDE({
