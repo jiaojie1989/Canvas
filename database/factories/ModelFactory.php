@@ -23,8 +23,11 @@ $factory->define(App\Models\User::class, function (Faker\Generator $faker) {
         'city'          => $faker->city,
         'country'       => $faker->countryCode,
         'url'           => $faker->url,
+        'phone'         => $faker->phoneNumber,
+        'bio'           => $faker->paragraph,
+        'gender'        => 'foo',
+        'relationship'  => 'foo',
         'password'      => bcrypt('password'),
-
     ];
 });
 
