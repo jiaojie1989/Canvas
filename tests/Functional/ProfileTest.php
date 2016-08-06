@@ -1,25 +1,23 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ProfileTest extends TestCase
 {
     use DatabaseMigrations;
 
     protected $optionalFields = [
-        'bio'          => 'Summary',
-        'gender'       => '<dt>Gender</dt>',
-        'birthday'     => '<dt>Birthday</dt>',
+        'bio' => 'Summary',
+        'gender' => '<dt>Gender</dt>',
+        'birthday' => '<dt>Birthday</dt>',
         'relationship' => '<dt>Relationship Status</dt>',
-        'phone'        => '<dt>Mobile Phone</dt>',
-        'twitter'      => '<dt>Twitter</dt>',
-        'facebook'     => '<dt>Facebook</dt>',
-        'github'       => '<dt>GitHub</dt>',
-        'address'      => '<dt>Address</dt>',
-        'city'         => '<dt>City</dt>',
-        'country'      => '<dt>Country</dt>'
+        'phone' => '<dt>Mobile Phone</dt>',
+        'twitter' => '<dt>Twitter</dt>',
+        'facebook' => '<dt>Facebook</dt>',
+        'github' => '<dt>GitHub</dt>',
+        'address' => '<dt>Address</dt>',
+        'city' => '<dt>City</dt>',
+        'country' => '<dt>Country</dt>',
     ];
 
     protected $requiredFields = [
@@ -59,7 +57,7 @@ class ProfileTest extends TestCase
 
         // assert reponse contains error message for each field
         foreach ($this->requiredFields as $name) {
-            $this->see("The " . str_replace('_', ' ', $name). " field is required.");
+            $this->see('The '.str_replace('_', ' ', $name).' field is required.');
         }
     }
 }
