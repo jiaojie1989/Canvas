@@ -18,12 +18,12 @@ Markdown is a plain text formatting syntax created by John Gruber, aiming to pro
 ## Typography
 ---
 
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
 Just put angle brackets around an email and it becomes clickable: <user@example.com> `<user@example.com>`
 
@@ -41,16 +41,16 @@ If the link text itself would make a good id, you can link [like this][] `[like 
 [arbitrary_id]: http://example.com "Title"
 [like this]: http://example.com
 
-Option name         | Markup           | Result                  |
---------------------|------------------|-------------------------|
-Intra-word emphasis | `Intra-word em\*pha\*sis`   | Intra-word em<em>pha</em>sis   |
-Strikethrough       | `\~~Strikethrough\~~`   | <del>Strikethrough</del>   |
-Underline  | `\_Underline\_`      | <u>Underline</u>        |
-Quote      | `\"Quote\"`  | <q>Quote</q>    |
-Highlight           | `\==Highlight\==`    | <mark>Highlight</mark>  |
-Superscript         | `Some\^(superscript)`     | Some<sup>superscript</sup>   |
-Italics            | `**Italics**`      | <em>Italics</em>        |
-Bold | `*Bold text*`   | <strong>Bold text</strong>   |
+Option name         | Markup           | Result
+--------------------|------------------|-------------------------
+Intra-word emphasis | `Intra-word em\*pha\*sis`   | Intra-word em<em>pha</em>sis
+Strikethrough       | `\~~Strikethrough\~~`   | <del>Strikethrough</del>
+Underline  | `\_Underline\_`      | <u>Underline</u>
+Quote      | `\"Quote\"`  | <q>Quote</q>
+Highlight           | `\==Highlight\==`    | <mark>Highlight</mark>
+Superscript         | `Some\^(superscript)`     | Some<sup>superscript</sup>
+Italics            | `**Italics**`      | <em>Italics</em>
+Bold | `*Bold text*`   | <strong>Bold text</strong>
 HTML Entities | ``&copy;`` ``&#402;`` ``&#8482;`` ``&reg;`` | © ƒ ™ ®
 
 <div class="section-divider"></div>
