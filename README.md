@@ -13,14 +13,15 @@
 
 ## Requirements
 
-Since Canvas is built on Laravel 5.2, there are a few system requirements:
+Before you proceed make sure your server meets the following requirements:
 
 - PHP >= 5.5.9
-- OpenSSL PHP Extension
 - PDO PHP Extension
-- PDO compliant database (SQL, MySQL, PostgreSQL, SQLite)
+- SQLite PHP Extension
+- OpenSSL PHP Extension
 - Mbstring PHP Extension
 - Tokenizer PHP Extension
+- PDO compliant database (SQL, MySQL, PostgreSQL, SQLite)
 
 ## Download
 
