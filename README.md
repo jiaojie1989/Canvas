@@ -74,7 +74,7 @@ Installing Canvas is really simple. Just run `php artisan canvas:install` and fo
 
 ## Search Indexing
 
-Search functionality in Canvas is provided by [TNTSearch](https://github.com/teamtnt/tntsearch).
+Search functionality in Canvas is provided by [TNTSearch](https://github.com/teamtnt/tntsearch) and requires the [SQLite](http://php.net/manual/en/book.sqlite3.php) PHP extension to be installed on your server as listed above.
 
 To build the index, simply run `php artisan canvas:index`.
 
@@ -110,15 +110,20 @@ After you make any modifications to the files in `Canvas/resources/assets/less/`
 gulp
 ```
 
-## Unit Testing
+## Google Analytics
 
-This section is optional. If you do not want to run unit tests on your application and just want to get straight to blogging, that's completely up to you. If you do choose to utilize the test suite bundled with Canvas, you will need to have the PHP extension [SQLite](http://php.net/manual/en/book.sqlite3.php) installed on your server. The unit tests are run against memory so you can safely test your application without affecting real data.
+Canvas natively supports [Google Analytics](https://www.google.com/analytics/#?modal_active=none).
+
+1. Set up a web property on [Google Analytics](https://www.google.com/analytics/#?modal_active=none).
+2. Enter your `GA_ID`(Tracking ID) into the `.env` file.
+3. Enable Google Analytics in the `.env` file by setting `GA_ENABLE` to `true`.
 
 ## Disqus Comments
 
-To enable Disqus comments on your blog, you need to have a unique shortname. For more information, check out the [Official Documentation](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-).
+Canvas allows the integration of [Disqus](https://disqus.com) comments into your blog.
 
-Once you have registered your site and have a shortname, use it to set the `DISQUS_NAME` key in your `.env` file.
+1. Grab a unique shortname from [Official Documentation](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-).
+2. Enter your `DISQUS_NAME`(Shortname) into the `.env` file.
 
 ## Contributing
 
