@@ -9,7 +9,7 @@
 <a href="https://packagist.org/packages/austintoddj/canvas" target="_blank"><img src="https://poser.pugx.org/austintoddj/canvas/v/stable" alt="Latest Stable Version"></a>
 <a href="https://github.com/austintoddj/canvas/blob/master/LICENSE"><img src="https://poser.pugx.org/austintoddj/canvas/license" alt="License"></a>
 
-<a href="http://canvas.toddaustin.io">Canvas</a> is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing.
+[Canvas](https://canvas.toddaustin.io) is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing. It is powered by [Laravel](https://laravel.com) and features [SimpleMDE](https://simplemde.com) for Markdown writing, site searching by [TNTSearch](https://github.com/teamtnt/tntsearch), native [Google Analytics](https://www.google.com/analytics/#?modal_active=none) integration and more!
 
 ## Requirements
 
@@ -23,107 +23,40 @@ Before you proceed make sure your server meets the following requirements:
 - Tokenizer PHP Extension
 - PDO compliant database (SQL, MySQL, PostgreSQL, SQLite)
 
-## Download
+## Installation
 
-Getting Canvas up and running is simple. You can choose either of the following download options:
-
-Option 1 - Use Packagist:
-
-```sh
-composer create-project austintoddj/canvas
-```
-
-Option 2 - Use GitHub:
-
-```sh
-git clone https://github.com/austintoddj/canvas.git
-```
-
-If you chose Option 1, skip this step. If you chose Option 2, run the following command from the project root:
-
-```sh
-composer install
-```
-
-To enable uploads on the blog, give ownership of the uploads directory to the web server:
-
-```sh
-sudo chown -R www-data:www-data public/uploads
-```
-
-## Application Configuration
-
-You will need to create a new `.env` file and fill in the necessary variables:
-
-```sh
-cat .env.example > .env; vim .env;
-```
-
-## User Configuration
-
-|Data Key|Value|
-|---|---|
-|Login Email|`admin@canvas.com`(default)|
-|Login Password|`password`(default)|
-
-When you download Canvas, you may want to change the default admin user credentials. To update admin user information including setting a new password (Recommended), edit the file `Canvas/database/seeds/UsersTableSeeder.php` and save it. Don't worry, you can always change this information within the application after the install process.
-
-## The 30 Second Canvas Installation
-
-Installing Canvas is really simple. Just run `php artisan canvas:install` and follow the on-screen prompts.
-
-## Search Indexing
-
-Search functionality in Canvas is provided by [TNTSearch](https://github.com/teamtnt/tntsearch) and requires the [SQLite](http://php.net/manual/en/book.sqlite3.php) PHP extension to be installed on your server as listed above.
-
-To build the index, simply run `php artisan canvas:index`.
-
-After you run the command, you just need to set the permissions of the storage directory:
-
-```sh
-sudo chmod o+w -R storage
-```
-
+1. There are 3 ways of downloading the application:
+    * Use [GitHub](https://github.com): simply download the zip on the from the top-right `Clone or download` button.
+    * Use [Git](https://git-scm.com): `git clone https://github.com/austintoddj/canvas.git`
+    * Use [Packagist](https://packagist.org): `composer create-project austintoddj/canvas`
+    
+2. From the command line in the project root, run `composer install`
+3. Give the `Uploads` directory write-access by the web server: `sudo chown -R www-data:www-data public/uploads`
+4. Copy the contents of `.env.example` and create a new file called `.env` in the project root. Set your application variables in the new file.
+5. Run `php artisan canvas:install` and follow the on-screen prompts.
+6. To build the search index, run `php artisan canvas:index`.
+7. Change the permissions of the `storage` directory: `sudo chmod o+w -R storage`
+8. Sign in to the application at `http://SITE_NAME/admin`
+    * Email: `admin@canvas.com`
+    * Password: `password`
+    
 **Congratulations!** Your new blog is set up and ready to go. Feeling adventurous? Continue on with the advanced options below to get even more out of Canvas.
 
-# Advanced Options
+## Advanced Options
 
-## Theming Canvas
-
-Adding or modifying styles with Canvas is a breeze. None of this needs to be done out of the box, it simply works on its own. But if you're feeling a little creative and want to make it stand out more, follow these steps:
-
-Install the project dependencies via `npm`:
-
-```sh
-sudo npm install
-```
-
-Install Gulp globally:
-
-```sh
-sudo npm install --global gulp-cli
-```
-
-After you make any modifications to the files in `Canvas/resources/assets/less/`, run gulp:
-
-```sh
-gulp
-```
-
-## Google Analytics
-
-Canvas natively supports [Google Analytics](https://www.google.com/analytics/#?modal_active=none).
-
-1. Set up a web property on [Google Analytics](https://www.google.com/analytics/#?modal_active=none).
-2. Enter your `GA_ID`(Tracking ID) into the `.env` file.
-3. Enable Google Analytics in the `.env` file by setting `GA_ENABLE` to `true`.
-
-## Disqus Comments
-
-Canvas allows the integration of [Disqus](https://disqus.com) comments into your blog.
-
-1. Grab a unique shortname from [Official Documentation](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-).
-2. Enter your `DISQUS_NAME`(Shortname) into the `.env` file.
+1. Theming Canvas
+    * Run `npm install` from the project root
+    * Run `npm install --global gulp-cli`
+    * After you make any modifications to the files in `canvas/resources/assets/less/`, run `gulp`
+    
+2. Google Analytics
+    * Set up a web property on [Google Analytics](https://www.google.com/analytics/#?modal_active=none).
+    * Enter your `GA_ID`(Tracking ID) into the `.env` file.
+    * Enable Google Analytics in the `.env` file by setting `GA_ENABLE` to `true`.
+    
+3. Disqus Integration
+    * Generate a unique shortname from [Official Documentation](https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-).
+    * Enter your `DISQUS_NAME`(Shortname) into the `.env` file.
 
 ## Contributing
 
