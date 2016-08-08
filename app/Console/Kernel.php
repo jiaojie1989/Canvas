@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\IndexPosts::class,
+        \App\Console\Commands\Index::class,
         \App\Console\Commands\Install::class,
     ];
 

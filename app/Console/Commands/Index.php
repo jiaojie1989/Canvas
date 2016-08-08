@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use TeamTNT\TNTSearch\TNTSearch;
 
-class IndexPosts extends Command
+class Index extends Command
 {
     protected $tnt;
     /**

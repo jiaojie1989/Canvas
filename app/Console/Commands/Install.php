@@ -20,7 +20,7 @@ class Install extends Command
      *
      * @var string
      */
-    protected $description = 'The 30 Second Canvas Installation';
+    protected $description = 'The 30 second Canvas installation';
 
     /**
      * Create a new command instance.
@@ -53,7 +53,7 @@ class Install extends Command
         $this->line(PHP_EOL.'<info>✔</info> Success! The blog subtitle has been saved.');
 
         // Blog Description
-        $blogDescription = $this->ask('Step 3: Description of your blog');
+        $blogDescription = $this->ask('Step 3: Description of your blog (og:type Meta Tag)');
         $this->description($blogDescription, $config);
         $this->line(PHP_EOL.'<info>✔</info> Success! The blog description has been saved.');
 
@@ -63,7 +63,7 @@ class Install extends Command
         $this->line(PHP_EOL.'<info>✔</info> Success! The author name has been saved.');
 
         // Posts Per Page
-        $postsPerPage = $this->ask('Step 5: Number of posts to display on the Blog Index page');
+        $postsPerPage = $this->ask('Step 5: Number of posts to display per page');
         $this->postsPerPage($postsPerPage, $config);
         $this->line(PHP_EOL.'<info>✔</info> Success! The number of posts per page has been saved.');
 
