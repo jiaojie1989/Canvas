@@ -9,18 +9,19 @@
 <a href="https://packagist.org/packages/austintoddj/canvas" target="_blank"><img src="https://poser.pugx.org/austintoddj/canvas/v/stable" alt="Latest Stable Version"></a>
 <a href="https://github.com/austintoddj/canvas/blob/master/LICENSE"><img src="https://poser.pugx.org/austintoddj/canvas/license" alt="License"></a>
 
-[Canvas](http://canvas.toddaustin.io) is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing. It is powered by [Laravel](https://laravel.com) and features [SimpleMDE](https://simplemde.com) for Markdown writing, site searching by [TNTSearch](https://github.com/teamtnt/tntsearch), native [Google Analytics](https://www.google.com/analytics/#?modal_active=none) integration and more!
+[Canvas](http://canvas.toddaustin.io) is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing. It is inspired by [Google Material Design](https://material.google.com), powered by [Laravel](https://laravel.com) and features [SimpleMDE](https://simplemde.com) for Markdown writing, site searching by [TNTSearch](https://github.com/teamtnt/tntsearch), native [Google Analytics](https://www.google.com/analytics/#?modal_active=none) integration and more!
 
 ## Requirements
 
 Before you proceed make sure your server meets the following requirements:
 
-- PHP >= 5.5.9
-- PDO PHP Extension
-- SQLite PHP Extension
-- OpenSSL PHP Extension
-- Mbstring PHP Extension
-- Tokenizer PHP Extension
+- [Composer](https://getcomposer.org/)
+- [PHP](https://php.net/) >= 5.5.9
+- [PDO](http://php.net/manual/en/book.pdo.php) PHP Extension
+- [SQLite](http://php.net/manual/en/book.sqlite.php) PHP Extension
+- [OpenSSL](http://php.net/manual/en/book.openssl.php) PHP Extension
+- [Mbstring](http://php.net/manual/en/book.mbstring.php) PHP Extension
+- [Tokenizer](http://php.net/manual/en/book.tokenizer.php) PHP Extension
 - PDO compliant database (SQL, MySQL, PostgreSQL, SQLite)
 
 ## Installation
@@ -60,7 +61,7 @@ Before you proceed make sure your server meets the following requirements:
 
 ## Contributing
 
-Thank you for considering contributing to Canvas! The contribution guide can be found [here](https://github.com/austintoddj/Canvas/blob/master/CONTRIBUTING.md) and also has details about joining the official [HipChat group](https://canvas-blog.hipchat.com/home) for those who want to be a part of Canvas' future development.
+Thank you for considering contributing to Canvas! The [contribution guide](https://github.com/austintoddj/Canvas/blob/master/CONTRIBUTING.md) provides instructions on how to correctly report issues, submit pull requests and more. It also has details about joining the official [HipChat group](https://canvas-blog.hipchat.com/home) for those who want to be a part of Canvas' future development.
 
 ## Changelog
 
