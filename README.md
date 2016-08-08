@@ -9,7 +9,7 @@
 <a href="https://packagist.org/packages/austintoddj/canvas" target="_blank"><img src="https://poser.pugx.org/austintoddj/canvas/v/stable" alt="Latest Stable Version"></a>
 <a href="https://github.com/austintoddj/canvas/blob/master/LICENSE"><img src="https://poser.pugx.org/austintoddj/canvas/license" alt="License"></a>
 
-[Canvas](https://canvas.toddaustin.io) is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing. It is powered by [Laravel](https://laravel.com) and features [SimpleMDE](https://simplemde.com) for Markdown writing, site searching by [TNTSearch](https://github.com/teamtnt/tntsearch), native [Google Analytics](https://www.google.com/analytics/#?modal_active=none) integration and more!
+[Canvas](http://canvas.toddaustin.io) is a minimal blogging application for developers. It attempts to make blogging simple and enjoyable by utilizing the latest technologies and keeping the administration as simple as possible with the primary focus on writing. It is powered by [Laravel](https://laravel.com) and features [SimpleMDE](https://simplemde.com) for Markdown writing, site searching by [TNTSearch](https://github.com/teamtnt/tntsearch), native [Google Analytics](https://www.google.com/analytics/#?modal_active=none) integration and more!
 
 ## Requirements
 
